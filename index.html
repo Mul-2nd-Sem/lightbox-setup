@@ -13,16 +13,21 @@
   <body>
     <div class="container">
       <!-- lightbox image -->
-      <div class="lightbox">
+      <div onclick="openModal()" class="lightbox">
         <img id="smallImage" src="images/cute-cat.jpeg" class="portrait" />
       </div>
 
       <!-- modal -->
-      <div id="myModal" class="modal">
+      <div id="myModal" onclick="closeModal()" class="modal">
         <div class="modal--container">
           <img src="images/cute-cat.jpeg" class="portrait--big" id="bigImage" />
         </div>
       </div>
     </div>
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+    </script>
   </body>
 </html>
